@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:rim="http://www.blackberry.com/ns/widgets"
+	id="com.kofax.cordova"
+	version="1.0.0">
+
+<name>Kofax Phonegap SDK</name>
+<description>PhoneGap plugin for accessing kofax mobile SDK</description>
+<author>Kofax Hyderabad Development Team</author>
+
+<info>
+    
+</info>
+
+<js-module src="www/kfxMobilePlugin.js" name="kfxMobilePlugin">
+	<clobbers target="window.kfxCordova" />
+</js-module>
+
+<platform name="ios">
+	<!-- config file -->
+	<config-file target="config.xml" parent="/*">
+		<feature name="kfxPlugin">
+			<param name="ios-package" value="kfxPlugin" />
+		</feature>
+        <preference name="DisallowOverscroll" value="true" />
+        <preference name="webviewbounce" value="false" />
+	</config-file>
+
+	<!-- core CustomCamera header and source files -->
+	<framework src="lib/iOS/kfxMobileCordova.framework" custom="true"/>
+    <framework src="CoreVideo.framework"/>
+    <framework src="SystemConfiguration.framework"/>
+    <framework src="libxml2.2.dylib"/>
+    <framework src="libc++.dylib"/>
+    <framework src="AVFoundation.framework"/>
+    <framework src="CoreMotion.framework"/>
+    <framework src="CoreMedia.framework"/>
+    <framework src="QuartzCore.framework"/>
+    <framework src="AudioToolbox.framework"/>
+    <framework src="CoreImage.framework"/>
+    <framework src="ImageIO.framework"/>
+    <framework src="CoreTelephony.framework"/>
+</platform>
+<platform name="android">
+    <!-- config file -->
+    <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="kfxPlugin">
+			<param name="android-package" value="com.kofax.hybrid.cordova.MainKofaxPlugin" />
+		</feature>
+    </config-file>
+    
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="com.kofax.bankright.permission.MAPS_RECEIVE" />
+        <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+        <uses-permission android:name="android.permission.CAMERA" />
+        <uses-feature android:name="android.hardware.camera" />
+        <uses-feature android:name="android.hardware.camera.autofocus" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    </config-file>
+    
+    <!-- core files -->
+    <source-file src="lib/Android/KofaxMobileSdkPlugin.jar" target-dir="libs" />
+    <source-file src="lib/Android/commons-lang3-3.1.jar" target-dir="libs" />
+    <source-file src="lib/Android/kfxengines.jar" target-dir="libs" />
+    <source-file src="lib/Android/kfxlogistics.jar" target-dir="libs" />
+    <source-file src="lib/Android/kfxuicontrols.jar" target-dir="libs" />
+    <source-file src="lib/Android/kfxutilities.jar" target-dir="libs" />
+    <source-file src="lib/Android/kofax.isg.android.sol.isg_mobile.jar" target-dir="libs" />
+    <source-file src="lib/Android/ksoap2-android-assembly-2.6.2-CUSTOM-jar-with-dependencies.jar" target-dir="libs" />
+    <source-file src="lib/Android/armeabi/libBarcodeScannerLib.so" target-dir="libs/armeabi" />
+    <source-file src="lib/Android/armeabi/libEvrsJniWrapper.so" target-dir="libs/armeabi" />
+    <source-file src="lib/Android/armeabi/libgnustl_shared.so" target-dir="libs/armeabi" />
+    <source-file src="lib/Android/armeabi/libsol_isg_mobile.so" target-dir="libs/armeabi" />
+    <source-file src="lib/Android/armeabi-v7a/libBarcodeScannerLib.so" target-dir="libs/armeabi-v7a" />
+    <source-file src="lib/Android/armeabi-v7a/libEvrsJniWrapper.so" target-dir="libs/armeabi-v7a" />
+    <source-file src="lib/Android/armeabi-v7a/libgnustl_shared.so" target-dir="libs/armeabi-v7a" />
+    <source-file src="lib/Android/armeabi-v7a/libsol_isg_mobile.so" target-dir="libs/armeabi-v7a" />
+
+    
+	<source-file src="lib/Android/armeabi/libAtalaBar.so" target-dir="libs/armeabi" />
+	<source-file src="lib/Android/armeabi-v7a/libAtalaBar.so" target-dir="libs/armeabi-v7a" />
+    
+</platform>
+</plugin>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height,target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.1.min.css" />
+        <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.mobile-1.4.1.min.js"></script>
+        <title>Barcode Settings</title>
+    </head>
+    <body>
+        <div data-role="page" id="barcodeSettingsPage">
+            <div data-role="header" data-position="fixed">
+                <a data-rel="back" data-icon="app-back" data-iconpos="notext">Back</a>
+                <h1>Barcode Settings</h1>
+                <a class="ui-btn ui-btn-icon-right ui-btn-right" id="barcodeSaveBtn" onClick="barcodeSaveAction()"> Save </a>
+            </div>
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Guiding Line:</legend>
+                        <input type="radio" name="radio-choice-1" class="custom" id="radio-choice-1" value="OFF" />
+                        <label for="radio-choice-1">OFF</label>
+                        <input type="radio" name="radio-choice-1" class="custom" id="radio-choice-2" value="LANDSCAPE"  />
+                        <label for="radio-choice-2">LANDSCAPE</label>
+                        <input type="radio" name="radio-choice-1" class="custom" id="radio-choice-3" value="PORTRAIT"  />
+                        <label for="radio-choice-3">PORTRAIT</label>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Search Directions:</legend>
+                        <input type="checkbox" name="ALL" id="checkbox-1" class="custom" />
+                        <label for="checkbox-1">ALL</label>
+                        <input type="checkbox" name="VERTICAL" id="checkbox-2" class="custom" />
+                        <label for="checkbox-2">VERTICAL</label>
+                        <input type="checkbox" name="HORIZONTAL" id="checkbox-3" class="custom" />
+                        <label for="checkbox-3">HORIZONTAL</label>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Symbologies:</legend>
+                        <input type="checkbox" name="CODE39" id="checkbox-4" class="custom1" />
+                        <label for="checkbox-4">CODE39</label>
+                        <input type="checkbox" name="PDF417" id="checkbox-5" class="custom1" />
+                        <label for="checkbox-5">PDF417</label>
+                        <input type="checkbox" name="QR" id="checkbox-6" class="custom1" />
+                        <label for="checkbox-6">QR</label>
+                        <input type="checkbox" name="DATAMATRIX" id="checkbox-7" class="custom1" />
+                        <label for="checkbox-7">DATAMATRIX</label>
+                        <input type="checkbox" name="CODE128" id="checkbox-8" class="custom1" />
+                        <label for="checkbox-8">CODE128</label>
+                        <input type="checkbox" name="CODE25" id="checkbox-9" class="custom1" />
+                        <label for="checkbox-9">CODE25</label>
+                        <input type="checkbox" name="EAN" id="checkbox-10" class="custom1" />
+                        <label for="checkbox-10">EAN</label>
+                        <input type="checkbox" name="UPC" id="checkbox-11" class="custom1" />
+                        <label for="checkbox-11">UPC</label>
+                        <input type="checkbox" name="CODABAR" id="checkbox-12" class="custom1" />
+                        <label for="checkbox-12">CODABAR</label>
+                        <input type="checkbox" name="AZTEC" id="checkbox-13" class="custom1" />
+                        <label for="checkbox-13">AZTEC</label>
+                        <input type="checkbox" name="CODE93" id="checkbox-14" class="custom1" />
+                        <label for="checkbox-14">CODE93</label>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/app.js"></script>
+    </body>
+</html>

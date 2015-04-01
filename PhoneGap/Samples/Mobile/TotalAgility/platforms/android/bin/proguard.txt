@@ -1,0 +1,9 @@
+# view AndroidManifest.xml #generated:26
+-keep class com.kofax.mobile.sdk.phonegap.TotalAgility.RemoteUrlActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:37
+-keep class com.kofax.mobile.sdk.phonegap.TotalAgility.TotalAgility { <init>(...); }
+
+# onClick res/layout/remoteurlprompt.xml #generated:23
+-keepclassmembers class * { *** navigateToUrl(...); }
+

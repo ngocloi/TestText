@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height,target-densitydpi=medium-dpi" />
+        <link rel="stylesheet" type="text/css" href="../css/index.css" />
+        <link rel="stylesheet" type="text/css" href="../css/jquery.mobile-1.4.1.min.css" />
+        <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="../js/jquery.mobile-1.4.1.min.js"></script>
+        <title>Process Settings</title>
+    </head>
+    <body>
+        <div data-role="page" id="processorSettingsPage">
+            <div data-role="header" data-position="fixed">
+                <a data-rel="back" data-icon="app-back" data-iconpos="notext" >Back</a>
+                <h1>Process Settings</h1>
+                <a class="ui-btn ui-btn-icon-right ui-btn-right" onClick="reviewSaveAction()"> Save </a>
+            </div>
+            <div data-role="content">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Image Representation:</legend>
+                        <input type="radio" name="repradio" id="radio-choice-1" value="IMAGE_REP_NONE" class="imgRep"/>
+                        <label for="radio-choice-1">IMAGE_REP_NONE</label>
+                        <input type="radio" name="repradio" id="radio-choice-2" value="IMAGE_REP_BITMAP" class="imgRep" />
+                        <label for="radio-choice-2">IMAGE_REP_BITMAP</label>
+                        <input type="radio" name="repradio" id="radio-choice-3" value="IMAGE_REP_FILE" class="imgRep" />
+                        <label for="radio-choice-3">IMAGE_REP_FILE</label>
+                        <input type="radio" name="repradio" id="radio-choice-4" value="IMAGE_REP_BOTH"  class="imgRep" checked="checked"/>
+                        <label for="radio-choice-4">IMAGE_REP_BOTH</label>
+                    </fieldset>
+                </div>
+                
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <legend>Mime Type:</legend>
+                        <input type="radio" name="mimetyperadio" id="radio-choice-5" value="MIMETYPE_JPEG" class="imgMime" checked="checked"/>
+                        <label for="radio-choice-5">MIMETYPE_JPEG</label>
+                        <input type="radio" name="mimetyperadio" id="radio-choice-6" value="MIMETYPE_PNG"  class="imgMime" />
+                        <label for="radio-choice-6">MIMETYPE_PNG</label>
+                        <input type="radio" name="mimetyperadio" id="radio-choice-7" value="MIMETYPE_TIFF"  class="imgMime"/>
+                        <label for="radio-choice-7">MIMETYPE_TIFF</label>
+                        <input type="radio" name="mimetyperadio" id="radio-choice-8" value="MIMETYPE_UNKNOWN" class="imgMime"/>
+                        <label for="radio-choice-8">MIMETYPE_UNKNOWN</label>
+                        
+                    </fieldset>
+                </div>
+                
+                <div data-role="fieldcontain">
+                    <div data-role="fieldcontain">
+                        <label for="flip-1">Deskew:</label>
+                        <select name="flip1" id="flip1" data-role="slider">
+                            <option value="false">False</option>
+                            <option value="true">True</option>
+                        </select>
+                    </div>
+                    
+                    <div data-role="fieldcontain">
+                        <label for="basic">DPI Output:</label>
+                        <input type="number" name="outputdpi" id="outputdpi" value="200"  />
+                    </div>
+                    
+                    <div data-role="fieldcontain">
+                        <label for="basic">File Path:</label>
+                        <input type="text" name="outputdpi" id="processedImageFilePath" value="/storage/sdcard0/img34"  />
+                    </div>
+                    
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" id="outputbitdepth">
+                            <legend>BIT Depth:</legend>
+                            <input type="radio" name="outputbitdepthradio" id="radio-choice-20" value="BITONAL" class="bitdepth" checked="checked"/>
+                            <label for="radio-choice-20">BITONAL</label>
+                            <input type="radio" name="outputbitdepthradio" id="radio-choice-21" value="GRAYSCALE" class="bitdepth" />
+                            <label for="radio-choice-21">GRAYSCALE</label>
+                            <input type="radio" name="outputbitdepthradio" id="radio-choice-22" value="COLOR" class="bitdepth" />
+                            <label for="radio-choice-22">COLOR</label>
+                        </fieldset>
+                    </div>
+                    
+                       <div data-role="fieldcontain">
+                            <fieldset data-role="controlgroup">
+                                <legend>CroppingOptions:</legend>
+                                <input type="radio" name="cropradio" id="radio-choice-15" value="CROP_NONE" class="cropSettings" checked="checked" />
+                                <label for="radio-choice-15">CROP_NONE</label>
+                                <input type="radio" name="cropradio" id="radio-choice-16" value="CROP_AUTO" class="cropSettings" />
+                                <label for="radio-choice-16">CROP_AUTO</label>
+                                <input type="radio" name="cropradio" id="radio-choice-17" value="CROP_TETRAGON" class="cropSettings" />
+                                <label for="radio-choice-17">CROP_TETRAGON</label>
+                                <input type="radio" name="cropradio" id="radio-choice-18" value="CROP_QUICKANALYSIS" class="cropSettings" />
+                                <label for="radio-choice-18">CROP_QUICKANALYSIS</label>
+                                
+                            </fieldset>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../js/app.js"></script>
+    </body>
+</html>
